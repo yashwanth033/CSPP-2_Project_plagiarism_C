@@ -306,3 +306,25 @@ test1.txt	0.00		0.00		SAMEFILE	0.00
 test.txt	18.18		18.18		0.00		SAMEFILE	
 
 
+Tue Sep 19 19:10:07 2017
+
+-----------------------------BAG OF WORDS------------------------------
+FILES		test2.txt	test3.txt	test1.txt	test.txt	
+test2.txt	SAMEFILE	100.00		67.08		63.25		
+test3.txt	100.00		SAMEFILE	67.08		63.25		
+test1.txt	67.08		67.08		SAMEFILE	28.28		
+test.txt	63.25		63.25		28.28		SAMEFILE	
+--------------------------------L C S-------------------------------
+FILES		test2.txt	test3.txt	test1.txt	test.txt	
+test2.txt	SAMEFILE	100.00		41.03		30.77		
+test3.txt	100.00		SAMEFILE	41.03		30.77		
+test1.txt	41.03		41.03		SAMEFILE	23.08		
+test.txt	30.77		30.77		23.08		SAMEFILE	
+----------------------------Fingerprinting---------------------------
+FILES		test2.txt	test3.txt	test1.txt	test.txt	
+test2.txt	SAMEFILE	100.00		0.00		18.18		
+test3.txt	100.00		SAMEFILE	0.00		18.18		
+test1.txt	0.00		0.00		SAMEFILE	0.00		
+test.txt	18.18		18.18		0.00		SAMEFILE	
+
+

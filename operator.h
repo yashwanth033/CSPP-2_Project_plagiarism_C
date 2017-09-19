@@ -297,10 +297,15 @@ void operator(struct files *fii, char* fname,char** fstopwords,int fstopwordcoun
 
     /*
     ------------------------------------------------------
-    Passing them to into the arguement stucture variables.
+    Passing them to into the arguement stucture variables
+    and freeing unreturned pointers.
     ------------------------------------------------------
     */
     
+	free(nostopwords);
+	free(fwords);
+	free(token);
+
     fii->fchars = fchar;
     fii->fcharlen = fcharl;
     fii->fallwords = allWords;
