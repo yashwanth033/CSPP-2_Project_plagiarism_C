@@ -211,7 +211,7 @@ Finding the cosine similarity for all combinations of files.
  			}
  			else
  			{
- 				cosinesimilarity(&file[i],&file[j],filesList[i],filesList[j]);
+ 				cosinesimilarity(&file[i],&file[j]);
  			}
  		}
  		printf("\n");
@@ -243,7 +243,7 @@ Finding the L C S for all combinations of files.
  			}
  			else
  			{
- 				LCS(&file[i],&file[j],filesList[i],filesList[j]);
+ 				LCS(&file[i],&file[j]);
  			}
  		}
  		printf("\n");
@@ -275,7 +275,7 @@ Finding the L C S for all combinations of files.
  			}
  			else
  			{
- 				fingerprinting(&file[i],&file[j],filesList[i],filesList[j]);
+ 				fingerprinting(&file[i],&file[j]);
  			}
  		}
  		printf("\n");

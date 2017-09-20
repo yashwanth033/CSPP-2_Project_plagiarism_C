@@ -15,7 +15,7 @@ int hasher(char* string1,int pin)
 	return h;
 }
 
-void fingerprinting(struct files *file1,struct files *file2, char* fname1,char* fname2)
+void fingerprinting(struct files *file1,struct files *file2)
 {
 	/*
 	-------------------------------------------------------

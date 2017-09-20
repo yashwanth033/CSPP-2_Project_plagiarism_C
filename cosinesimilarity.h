@@ -5,7 +5,7 @@ Kadiyam Yaswant Reddy
 ----------------------------------------------------------------------
 */
 
-void cosinesimilarity(struct files *file1,struct files *file2, char* fname1,char* fname2)
+void cosinesimilarity(struct files *file1,struct files *file2)
 {
 	/*
 	------------------------------------------------------------------

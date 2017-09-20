@@ -8,7 +8,7 @@ calculated and printed between the files.
 --------------------------------------------------------- 
 */
 
-void LCS(struct files *file1, struct files *file2, char* fname1, char* fname2)
+void LCS(struct files *file1, struct files *file2)
 {
 	/*
 	--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ void LCS(struct files *file1, struct files *file2, char* fname1, char* fname2)
 	}
 	for(i=0;i<file2->fallwordslen;i++)
 	{
-		len_dct1 = len_dct1 + strlen(file2->fallwords[i]);
+		len_dct2 = len_dct2 + strlen(file2->fallwords[i]);
 	}
 	double lcs = ((2*z)/(len_dct1+len_dct2))*100;
 	printf("%.2f\t\t",lcs);
