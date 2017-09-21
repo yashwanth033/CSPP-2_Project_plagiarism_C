@@ -19,6 +19,7 @@ removed. All the characters have been lower cased.
 #include <string.h>
 #include <dirent.h>
 #include <math.h>
+#include <stdbool.h>
 #include <time.h>
 
 /*
@@ -37,6 +38,7 @@ struct files
 	int fnonrepwordslen;
 	int *fcount;
 	char *ffingerstring;
+	bool isempty;
 };
 
 /*
@@ -70,6 +72,7 @@ int main(int argc, char const *argv[])
 
 FILE *flp;
 flp = freopen("logfile.log", "a", stdout);
+timestamp();
 /*
 ------------------------------------------------------------------
 Path of directory is to be given through terminal while 
@@ -83,7 +86,7 @@ executing.
  
     if (dr == NULL)
     {
-        printf("Could not open current directory" );
+        printf("Could not open current directory\n" );
         exit(1);
     }
  
@@ -100,10 +103,15 @@ executing.
 
 /*
 -----------------------------------------------------------------
-All file names have been listed in to the FilesList Array. 
+All file names have been listed in to the FilesList Array. Empty
+directories handled.
 -----------------------------------------------------------------
-
 */
+
+if(n==0){
+	printf("Error: Directory is empty.\n");
+	exit(1);
+}
 
 	char *filesList[n];
 	char *filepaths[n];
@@ -140,7 +148,7 @@ int stopwordcount = 0;
 FILE *fswp = fopen("stopwords.txt","r");
 if(fswp == NULL) 
     {
-        perror("Error in opening stop words file");
+        perror("Error in opening stop words file\n");
         exit(1);
     }
 
@@ -183,7 +191,6 @@ Filling the structure with file data and starting printing as array.
 --------------------------------------------------------------------
 */
 
-    timestamp();
     printf("-----------------------------BAG OF WORDS------------------------------\n");
     printf("FILES\t\t");
 
